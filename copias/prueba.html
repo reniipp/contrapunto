@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrusel Horizontal al Scrollear</title>
+  <style>
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: sans-serif;
+      overflow-x: hidden;
+      background-color: black;
+    }
+
+    /* 🚀 Sección que pinnea y permite el scroll horizontal */
+    .scroll-section {
+      position: relative;
+      /* la altura la ajustamos con JS */
+    }
+
+    /* Contenedor fijo en viewport */
+.slider {
+  position: sticky;
+  top: 50%;                  /* lo colocás al 50% del alto de la ventana */
+  transform: translateY(-50%); /* y lo subís la mitad de su propia altura */
+  display: flex;
+  height: 60vh;              /* o el alto que prefieras */
+  align-items: center;
+  overflow: visible;
+  will-change: transform;
+}
+
+    /* Cada slide */
+    .slide-item {
+      flex: 0 0 auto;
+      width: 50%;
+      height: 95%;
+      margin-right: 20px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Otras secciones antes... -->
+
+  <section class="scroll-section">
+    <div class="slider">
+      <img class="slide-item" src="resource/images/1_tru.jpg" alt="Imagen 1">
+      <img class="slide-item" src="resource/images/2_tru.jpg" alt="Imagen 2">
+      <img class="slide-item" src="resource/images/3_tru.jpg" alt="Imagen 3">
+      <img class="slide-item" src="resource/images/4_tru.jpg" alt="Imagen 4">
+      <img class="slide-item" src="resource/images/5_tru.jpg" alt="Imagen 5">
+      <img class="slide-item" src="resource/images/6_tru.jpg" alt="Imagen 1">
+      <img class="slide-item" src="resource/images/7_tru.jpg" alt="Imagen 2">
+      <img class="slide-item" src="resource/images/8_tru.jpg" alt="Imagen 3">
+      <img class="slide-item" src="resource/images/9_tru.jpg" alt="Imagen 4">
+      <img class="slide-item" src="resource/images/11_tru.jpg" alt="Imagen 3">
+      <img class="slide-item" src="resource/images/12_tru.jpg" alt="Imagen 4">
+      <img class="slide-item" src="resource/images/10_tru.jpg" alt="Imagen 5">
+      <!-- Agregá más .slide-item según necesites -->
+    </div>
+  </section>
+
+  <!-- Otras secciones después... -->
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const slider = document.querySelector(".slider");
+    const section = document.querySelector(".scroll-section");
+    const slideCount = slider.children.length;
+    const slideWidth = slider.scrollWidth;
+    const viewportWidth = window.innerWidth;
+    const scrollDistance = slideWidth - viewportWidth + 20; 
+    // +20 para compensar el último margin-right
+
+    // Ajustar la altura de la sección para que permita el scroll vertical necesario
+    function setSectionHeight() {
+      section.style.height = `${window.innerHeight + scrollDistance}px`;
+    }
+    setSectionHeight();
+    window.addEventListener("resize", setSectionHeight);
+
+    // Animación horizontal ligada al scroll vertical
+gsap.to(slider, {
+  x: -scrollDistance,
+  ease: "none",
+  scrollTrigger: {
+    trigger: section,
+    start:    "top top",     // cuando la sección llegue al top
+    end:      "bottom bottom",// justo al llegar al final de la sección
+    scrub:    true,
+    pin:      true,
+    pinSpacing: false        // ❌ evita añadir espacio en blanco extra
+  }
+    });
+  </script>
+</body>
+</html>
+

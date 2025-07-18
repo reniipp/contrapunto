@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">    
+    <link rel="icon" href="resource/images/favicon.png" sizes="32x32" type="image/png">
+
+    <title>Contrapunto</title>
+</head>
+<body>
+
+
+<!-- CURSOR (afuera del wrapper) -->
+<img src="resource/images/sintesis/sintesis1.png" alt="sintesis" id="cursor-img">
+
+<div id="next-section">
+    <div class="contenedor-cielo">
+      <video autoplay muted loop playsinline id="background-video-next">
+        <source src="resource/videos/cielo_loop..mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="contenedor-imagenes">
+            <img src="resource/images/sintesis/sintesis-completa.png" alt="fusion" class="imagen1" />
+            <div class="imagenes2">
+            <img src="resource/images/nosotras/mili.png" alt="mili" class="imagen2 mili">
+            <img src="resource/images/nosotras/rena.png" alt="rena" class="imagen2 rena">
+            <img src="resource/images/nosotras/marti.png" alt="marti" class="imagen2 marti">
+            <img src="resource/images/nosotras/nere.png" alt="nere" class="imagen2 nere">
+            </div>
+    </div>
+
+</div>
+  
+
+
+<!-- SMOOTH WRAPPER -->
+<div id="smooth-wrapper" >
+    <div id="smooth-content">
+
+        <!-- SECCION1 - NOS SINCRONIZAMOS -->
+        <div class="section1-2" data-dot="1">
+            <div class="typewriter">
+                <h1 id="type-text"></h1>
+            </div>
+        </div>
+
+        <!-- SECCION2 - SOMOS CONTRAPUNTO -->
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="background-video">
+                <source src="resource/videos/seccion2..mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- SECCION3 - VIDEO ESTRELLAS -->
+        <div class="video-background section-ensamble">
+            <video autoplay muted loop playsinline id="background-video-ensamble">
+                <source src="resource/videos/estrellaas..mp4" type="video/mp4" />
+            </video>
+
+            <div class="fusion-wrapper">
+                <img src="resource/images/sintesis/sintesis2.png" alt="mitad2" class="fija-img" />
+            </div>
+        </div>
+
+
+        <!-- SECCIONES FINALES -->
+        <div id="secciones-finales" style="display: none; opacity: 0;">
+            <!-- SECCION4 - CIELO -->
+            <div id="next-section" data-dot="2"></div>
+              
+            <!-- SECCION5 - NUBES -->
+            <div class="seccion-nubes">
+                <img src="resource/images/nubes/nubes.png" alt="nubes" class="nubes-fijas" />
+            </div>
+
+            <!-- SECCION6 - PROGRAMAS -->
+            <section class="programas-scroll-seccion" data-dot="3">
+                <div class="programas">
+                    <img src="resource/images/programas/programas1.png" alt="" data-lag="1" class="programas1 img-left" />
+                    <img src="resource/images/programas/programas2.png" alt="" data-lag="2" class="programas1 img-right" />
+                    
+                    <div class="programas-video-wrapper">
+                        <video id="programas-video" playsinline preload="auto" loop >
+                          <source src="resource/videos/reel2.mp4" type="video/mp4">
+                        </video>
+                        <div id="play-button"><svg viewBox="0 0 100 100" width="80" height="80" fill="#5d0e8b"><polygon points="30,20 80,50 30,80" /></svg></div>
+                    </div>   
+                </div>
+            </section>
+
+            <!-- TRANSICIÓN DE COLOR ENTRE SECCIONES -->
+            <div class="transicion-gradiente5"></div>
+
+            <!-- SECCION7 - MOTION GRAPHICS -->
+            <div id="motion-graphics" class="motion-graphics" data-dot="4">
+                    <h2 class="texto-izquierda">MOTION</h2>
+                    <h2 class="texto-derecha">GRAPHICS</h2>
+            
+                <div class="contenedor-carousel">
+                    <div class="video-carousel">
+                        <div class="arrastra-item"><span>&lt; ARRASTRÁ Y CLICKEA &gt;</span></div>
+
+                        <div class="video-item"><a href="motion.html?video=1"><video src="resource/videos/m1_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=2"><video src="resource/videos/m2_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=3"><video src="resource/videos/m3_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=4"><video src="resource/videos/m4_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=5"><video src="resource/videos/m5_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=6"><video src="resource/videos/m6_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=7"><video src="resource/videos/m7_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=8"><video src="resource/videos/m8_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=9"><video src="resource/videos/m9_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=10"><video src="resource/videos/m10_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=11"><video src="resource/videos/m11_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=12"><video src="resource/videos/m12_p..mp4"  muted playsinline></video></a></div>
+                        <div class="video-item"><a href="motion.html?video=13"><video src="resource/videos/m13_p..mp4"  muted playsinline></video></a></div>        
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANSICIÓN DE COLOR ENTRE SECCIONES -->
+            <div class="transicion-gradiente"></div>
+  
+            <!-- SECCION8 - WEB -->
+            <section id="web-section" class="web-section" data-dot="5">
+                <div class="frases-container">
+                    <div class="frase"><h2 class="www-contrapunto">WWW.CONTRAPUNTO</h2><h2 class="desarrollo-web">desarrollo web</h2></div>
+                    <div class="frase"><h2 class="www-contrapunto">WWW.CONTRAPUNTO</h2><h2 class="desarrollo-web">desarrollo web</h2></div>
+                    <div class="frase"><h2 class="www-contrapunto">WWW.CONTRAPUNTO</h2><h2 class="desarrollo-web">desarrollo web</h2></div>
+                    <div class="frase"><h2 class="www-contrapunto">WWW.CONTRAPUNTO</h2><h2 class="desarrollo-web">desarrollo web</h2></div>
+                    <div class="frase"><h2 class="www-contrapunto">WWW.CONTRAPUNTO</h2><h2 class="desarrollo-web">desarrollo web</h2></div>
+                    <div class="frase"><h2 class="www-contrapunto">WWW.CONTRAPUNTO</h2><h2 class="desarrollo-web">desarrollo web</h2></div>
+                    <div class="frase"><h2 class="www-contrapunto">WWW.CONTRAPUNTO</h2><h2 class="desarrollo-web">desarrollo web</h2></div>
+                    <div class="frase"><h2 class="www-contrapunto">WWW.CONTRAPUNTO</h2><h2 class="desarrollo-web">desarrollo web</h2></div>     
+                </div>
+                
+                <div class="video-web-wrapper" >
+                    <a href="https://nererusso.github.io/faerie-soerie/index.html" target="_blank"><img src="resource/images/web/logo faire.png" alt="fairee" height="350px"></a>
+                    <a href="https://reniipp.github.io/betular/index.html" target="_blank"><img src="resource/images/web/logo betular.png" alt="betular" height="350px"></a>
+                    <a href="https://reniipp.github.io/lattafa/" target="_blank"><img src="resource/images/web/logo lattafa.png" alt="lattafa" height="350px"></a>
+                </div>     
+            </section>
+
+            <!-- TRANSICIÓN DE COLOR ENTRE SECCIONES -->
+            <div class="transicion-gradiente1"></div>
+
+            <!-- SECCION9 - DISEÑO GRAFICO1 -->
+            <div class="video-dg" data-dot="6">
+                <video id="video-dg" autoplay muted loop playsinline><source src="resource/videos/dg..mp4" type="video/mp4"></video>
+            </div>
+
+            <!-- TRANSICIÓN DE COLOR ENTRE SECCIONES -->
+            <div class="transicion-gradiente2"></div>
+
+            <!-- SECCION9 - DISEÑO GRÁFICO2 -->
+            <section class="seccion-horizontal-doble" id="diseño-grafico">
+                <div class="fila-scroll fila-uno">
+                  <div class="imagenes-scroll">
+                    <a href="dg.html?image=5"><img src="resource/images/p1.jpg" /></a>
+                    <video src="resource/videos/sintesis..mp4" muted loop playsinline autoplay class="video-scroll"></video>
+                    <a href="dg.html?image=1"><img src="resource/images/dg1/Dg1.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=2"><img src="resource/images/dg1/Dg2.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=3"><img src="resource/images/dg1/Dg3.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=4"><img src="resource/images/dg1/Dg4.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=5"><img src="resource/images/dg1/Dg5.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=6"><img src="resource/images/dg1/Dg6.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=7"><img src="resource/images/dg1/Dg7.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=8"><img src="resource/images/dg1/Dg8.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=9"><img src="resource/images/dg1/Dg9.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=10"><img src="resource/images/dg1/Dg10.jpg" class="imagenes-diseño" /></a>
+                  </div>
+                </div>
+                <div class="fila-scroll fila-dos">
+                  <div class="imagenes-scroll imagenes-scroll-invertida">
+                    <a href="dg.html?image=11"><img src="resource/images/dg1/Dg11.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=12"><img src="resource/images/dg1/Dg12.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=13"><img src="resource/images/dg1/Dg13.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=14"><img src="resource/images/dg1/Dg14.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=15"><img src="resource/images/dg1/Dg15.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=16"><img src="resource/images/dg1/Dg16.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=17"><img src="resource/images/dg1/Dg17.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=18"><img src="resource/images/dg1/Dg18.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=19"><img src="resource/images/dg1/Dg19.jpg" class="imagenes-diseño" /></a>
+                    <a href="dg.html?image=20"><img src="resource/images/dg1/Dg20.jpg" class="imagenes-diseño" /></a>
+                    <video src="resource/videos/estrella..mp4" muted loop playsinline autoplay class="video-scroll"></video>
+                    <a href="dg.html?image=21"><img src="resource/images/dg1/Dg21.jpg" class="imagenes-diseño"/></a>
+                  </div>
+                </div>
+            </section>
+
+            
+            <section class="tru">
+                <video autoplay muted loop playsinline class="tru-video">
+                    <source src="resource/videos/tru_identidad..mp4" type="video/mp4">
+                </video>
+            </section>
+
+            
+            <section class="scroll-carrusel-final">  
+                <div class="carousel-wrapper">   
+                <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+                <div class="slider-container">
+                <div class="slider">
+                <img class="slide-item" src="resource/images/tru_identidad/1_tru.jpg" alt="Imagen 1">
+                <img class="slide-item" src="resource/images/tru_identidad/2_tru.jpg" alt="Imagen 2">
+                <img class="slide-item" src="resource/images/tru_identidad/3_tru.jpg" alt="Imagen 3">
+                <img class="slide-item" src="resource/images/tru_identidad/4_tru.jpg" alt="Imagen 4">
+                <img class="slide-item" src="resource/images/tru_identidad/5_tru.jpg" alt="Imagen 5">
+                <img class="slide-item" src="resource/images/tru_identidad/6_tru.jpg" alt="Imagen 1">
+                <img class="slide-item" src="resource/images/tru_identidad/7_tru.jpg" alt="Imagen 2">
+                <img class="slide-item" src="resource/images/tru_identidad/8_tru.jpg" alt="Imagen 3">
+                <img class="slide-item" src="resource/images/tru_identidad/9_tru.jpg" alt="Imagen 4">
+                <img class="slide-item" src="resource/images/tru_identidad/11_tru.jpg" alt="Imagen 3">
+                <img class="slide-item" src="resource/images/tru_identidad/12_tru.jpg" alt="Imagen 4">
+                <img class="slide-item" src="resource/images/tru_identidad/10_tru.jpg" alt="Imagen 5">
+                </div>
+                </div>
+                <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+                </div> 
+            </section> 
+
+
+            <!-- TRANSICIÓN DE COLOR ENTRE SECCIONES -->
+            <div class="transicion-gradiente3"></div>
+
+
+            <!-- SECCION10 - 3D1 -->
+            <section class="contenedor-3d" data-dot="7">
+                <img src="resource/images/3D/sintesis-rosa.png" alt="sintesis-rosa" class="imagen-png-centrada">
+
+                <div class="texto-scroll-contenedor">
+                    <div class="scroll-palabras">
+                      <h2>MODELADO</h2>
+                      <h2 id="italic">TEXTURIZADO</h2>
+                      <h2>ANIMACIÓN</h2>
+                    </div>
+                </div>
+
+                <img src="resource/images/3D/sintesis-rosa.png" alt="3D" class="img-3d-extra" />
+            </section>
+
+            <!-- SECCION10 - 3D2 -->
+            <div class="contenedor-3d2" id="3D">
+                <div class="marcoo"></div>
+
+                <div class="carousel-container">
+                <button class="flecha" onclick="cambiarProyecto(-1)">&#10094;</button>
+            
+                <div class="marco" id="marco"></div>
+                <button class="flecha" onclick="cambiarProyecto(1)">&#10095;</button>
+                </div>
+          
+                <div class="tira-horizontal-vertical" id="tira-scroll">
+                <div class="contenedor-textos">
+                    <span>MODELADO - 3D - MAQUETADO - TEXTURAS - CORTES - </span>
+                    <span>MODELADO - 3D - MAQUETADO - TEXTURAS - CORTES - </span>
+                    <span>MODELADO - 3D - MAQUETADO - TEXTURAS - CORTES - </span>
+                    <span>MODELADO - 3D - MAQUETADO - TEXTURAS - CORTES - </span>
+                </div>
+                </div>
+            </div>
+
+            <!-- TRANSICIÓN DE COLOR ENTRE SECCIONES -->
+            <div class="transicion-gradiente4"></div>
+
+            <!-- SECCION11 - CAMPAÑAS -->
+            <section class="campañas" id="campañas" data-dot="8">
+                <h2 class="campañass">CAMPAÑAS</h2>
+                <h2 class="publicitarias">PUBLICITARIAS</h2>
+            </section>
+            
+            <section class="campañas">
+                <div class="card">
+                    <h2 class="card-title">SWISS MEDICAL</h2>
+                    <video class="card-video" src="resource/videos/estrellaas..mp4" muted loop autoplay playsinline></video>
+                </div>
+            </section>            
+            
+                <section class="texto-campañas">
+                    <h2 class="h2-campañas">Esta campaña busca visibilizar la salud mental y motivar a las personas a reconocer el bienestar emocional como una prioridad en su vida cotidiana.</h2>
+                </section>
+
+            <section >
+                <div class="container-campañas">
+                    <img src="resource/images/campañas/C1Blanco.jpg" alt="campaña1" class="fotos-campañas">
+                    <img src="resource/images/campañas/C1rojo.jpg" alt="campaña2" class="fotos-campañas">
+                </div>
+
+                <section class="texto-campañas">
+                    <h2 class="h2-campañas">Nos enfocamos en el estrés y la ansiedad, mostrando cómo estos estados pueden desencadenar trastornos alimenticios, depresión, insomnio, cefaleas y otros problemas emocionales graves.</h2>
+                </section>
+
+                <div class="container-campañas">
+                    <img src="resource/images/campañas/C2rojo.jpg" alt="campaña3" class="fotos-campañas">
+                    <img src="resource/images/campañas/C2Blanco.jpg" alt="campaña4" class="fotos-campañas">
+                </div>
+
+                <section class="texto-campañas">
+                    <h2 class="h2-campañas">Queremos que consulten a un médico en lugar de autodiagnosticarse online y posicionar Swiss Medical como la prepaga más confiable durante la Semana de la Salud.</h2>
+                </section>
+
+                <div class="container-campañas">
+                    <img src="resource/images/campañas/C1.jpg" alt="campaña5" class="fotos-campañas2">
+                    <img src="resource/images/campañas/C2.jpg" alt="campaña6" class="fotos-campañas2">
+                </div>
+
+                <section class="texto-campañas">
+                    <h2 class="h2-campañas">El servicio Chat Médico conecta a socios con profesionales reales para consultas confiables y concientiza a jóvenes y adultos sobre la salud mental y sus consecuencias.</h2>
+                </section>
+            </section>
+
+            <!-- TRANSICIÓN DE COLOR ENTRE SECCIONES -->
+            <div class="transicion-gradiente6"></div>
+
+            <!-- SECCION11 - FINAL -->
+            <footer class="footer" data-dot="9">
+                <video   autoplay muted playsinline  class="logo">
+                    <source src="resource/videos/logo..mp4" type="video/mp4">
+                </video>
+
+                <div class="redes-sociales">
+                    <a href="https://www.instagram.com/__contrapunto/" target="_blank">
+                      <img src="resource/images/redes/instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://www.artstation.com/contrapunto_agencia" target="_blank">
+                      <img src="resource/images/redes/artstation.png" alt="ArtStation" />
+                    </a>
+                    <a href="https://open.spotify.com/playlist/6AF1N6TB6yQmHUPF4xTGXK?si=cf27b9dff08f4d4e" target="_blank">
+                      <img src="resource/images/redes/spotify.png" alt="Spotify" />
+                    </a>
+                </div>
+            </footer>
+
+
+
+
+  
+        </div> 
+        
+
+    </div> 
+</div> 
+
+<div class="navbar-secciones">
+    <div class="nav-dot" data-section="1"></div>
+    <div class="nav-dot" data-section="2"></div>
+    <div class="nav-dot" data-section="3"></div>
+    <div class="nav-dot" data-section="4"></div>
+    <div class="nav-dot" data-section="5"></div>
+    <div class="nav-dot" data-section="6"></div>
+    <div class="nav-dot" data-section="7"></div>
+    <div class="nav-dot" data-section="8"></div>
+    <div class="nav-dot" data-section="9"></div>
+</div>
+
+<!-- JS -->
+
+<!-- GSAP core -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<!-- ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- ScrollSmoother oficial -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<!-- Tu código ya sin type="module" -->
+<script src="java.js"></script>
+
+
+
+</body>
+</html>
+

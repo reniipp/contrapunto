@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="resource/images/favicon.png" sizes="32x32" type="image/png">
+  <title>Contrapunto</title>
+  <link rel="stylesheet" href="style_secundario.css">
+</head>
+<body>
+
+    <section class="motion">
+        <div class="carousel-wrapper">
+            <button class="arrow left" onclick="prevVideo()">&#10094;</button>
+
+                <div class="video-container">
+                    <video src="resource/videos/m1_p.mp4" controls></video>
+                    <video src="resource/videos/m2_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m3_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m4_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m5_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m6_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m7_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m8_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m9_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m10_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m11_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m12_p.mp4" controls style="display: none;"></video>
+                    <video src="resource/videos/m13_p.mp4" controls style="display: none;"></video>-
+                </div>
+
+            <button class="arrow right" onclick="nextVideo()">&#10095;</button>
+        </div>
+
+        <div class="volver-container">
+            <a href="#" onclick="guardarYVolver('#motion-graphics')" class="volver-btn">
+            <span>&lt; CLICKEAME PARA VOLVER A VER COSAS COOL &gt;</span>
+            </a>
+        </div>
+    </section>
+
+
+  <script>
+  // ① DEFÍNELO EN EL ÁMBITO GLOBAL
+  function guardarYVolver(selector) {
+    // 1) indicamos que ya hicimos el ensamblado
+    sessionStorage.setItem('ensamblado', 'true');
+    // 2) guardamos la posición a la que queremos scroll (offsetTop de la sección)
+    //    que en index está: <section id="motion-graphics">
+    sessionStorage.setItem('scrollTo', selector);
+    // 3) volvemos a la home
+    window.location.href = 'index.html';
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const videos = document.querySelectorAll(".video-container video");
+    let currentIndex = 0;
+
+    // ✅ Leer parámetro ?video=…
+    const params = new URLSearchParams(window.location.search);
+    const vp = parseInt(params.get("video"));
+    if (!isNaN(vp) && vp > 0 && vp <= videos.length) currentIndex = vp - 1;
+
+    function showVideo(i) {
+      videos.forEach((v,k) => {
+        if (k === i) {
+          v.style.display = "block";
+          v.currentTime = 0;
+          v.play().catch(()=>{});
+        } else {
+          v.pause();
+          v.style.display = "none";
+        }
+      });
+    }
+    function prevVideo() {
+      currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+      showVideo(currentIndex);
+    }
+    function nextVideo() {
+      currentIndex = (currentIndex + 1) % videos.length;
+      showVideo(currentIndex);
+    }
+
+    showVideo(currentIndex);
+    window.prevVideo = prevVideo;
+    window.nextVideo = nextVideo;
+  });
+</script>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+/* Archivo: pptelegraf-fonts.css */
+@font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-RegularOblique.otf') format('opentype');
+    font-weight: 400;
+    font-style: oblique;
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-RegularSlanted.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic; /* opcional: tratá de usar solo uno entre oblique o italic */
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-Ultrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-UltraboldOblique.otf') format('opentype');
+    font-weight: 800;
+    font-style: oblique;
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-UltraboldSlanted.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-Ultralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-UltralightOblique.otf') format('opentype');
+    font-weight: 200;
+    font-style: oblique;
+  }
+  
+  @font-face {
+    font-family: 'PPTelegraf';
+    src: url('./fonts/PPTelegraf-UltralightSlanted.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+  }
+  

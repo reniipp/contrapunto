@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="resource/images/favicon.png" sizes="32x32" type="image/png">
+  <title>Contrapunto</title>
+  <link rel="stylesheet" href="style_secundario.css">
+</head>
+<body>
+
+    <section class="gallery">
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="prevImage()">&#10094;</button>
+
+      <div class="image-container">
+        <img src="resource/images/dg2/DG1.jpg" alt="Imagen 1">
+        <img src="resource/images/dg2/DG2.jpg" alt="Imagen 2" style="display: none;">
+        <img src="resource/images/dg2/DG3.jpg" alt="Imagen 3" style="display: none;">
+        <img src="resource/images/dg2/DG4.jpg" alt="Imagen 4" style="display: none;">
+        <img src="resource/images/dg2/DG5.jpg" alt="Imagen 5" style="display: none;">
+        <img src="resource/images/dg2/DG6.jpg" alt="Imagen 6" style="display: none;">
+        <img src="resource/images/dg2/DG7.jpg" alt="Imagen 7" style="display: none;">
+        <img src="resource/images/dg2/DG8.jpg" alt="Imagen 8" style="display: none;">
+        <img src="resource/images/dg2/DG9.jpg" alt="Imagen 9" style="display: none;">
+        <img src="resource/images/dg2/DG10.jpg" alt="Imagen 10" style="display: none;">
+        <img src="resource/images/dg2/DG11.jpg" alt="Imagen 11" style="display: none;">
+        <img src="resource/images/dg2/DG12.jpg" alt="Imagen 12" style="display: none;">
+        <img src="resource/images/dg2/DG13.jpg" alt="Imagen 13" style="display: none;">
+        <img src="resource/images/dg2/DG14.jpg" alt="Imagen 14" style="display: none;">
+        <img src="resource/images/dg2/DG15.jpg" alt="Imagen 15" style="display: none;">
+        <img src="resource/images/dg2/DG16.jpg" alt="Imagen 16" style="display: none;">
+        <img src="resource/images/dg2/DG17.jpg" alt="Imagen 17" style="display: none;">
+        <img src="resource/images/dg2/DG18.jpg" alt="Imagen 18" style="display: none;">
+        <img src="resource/images/dg2/DG19.jpg" alt="Imagen 19" style="display: none;">
+        <img src="resource/images/dg2/DG20.jpg" alt="Imagen 20" style="display: none;">
+        <img src="resource/images/dg2/DG21.jpg" alt="Imagen 21" style="display: none;">
+        <!-- Agregá más <img> según necesites -->
+      </div>
+
+      <button class="arrow right" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <div class="volver-container">
+      <a href="#" onclick="guardarYVolver('#diseño-grafico')" class="volver-btn1">
+        &lt; CLICKEAME PARA VOLVER A VER COSAS COOL &gt;
+      </a>
+    </div>
+  </section>
+
+  <script>
+  // ① DEFÍNELO EN EL ÁMBITO GLOBAL
+  function guardarYVolver(selector) {
+    // 1) indicamos que ya hicimos el ensamblado
+    sessionStorage.setItem('ensamblado', 'true');
+    // 2) guardamos la posición a la que queremos scroll (offsetTop de la sección)
+    //    que en index está: <section id="motion-graphics">
+    sessionStorage.setItem('scrollTo', selector);
+    // 3) volvemos a la home
+    window.location.href = 'index.html';
+  }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const imgs = document.querySelectorAll(".image-container img");
+      let currentIndex = 0;
+
+      // 📥 Leer parámetro ?image=…
+      const params = new URLSearchParams(window.location.search);
+      const ip = parseInt(params.get("image"));
+      if (!isNaN(ip) && ip > 0 && ip <= imgs.length) {
+        currentIndex = ip - 1;
+      }
+
+      // Mostrar sólo la imagen indicada
+      function showImage(idx) {
+        imgs.forEach((img, i) => {
+          img.style.display = (i === idx) ? "block" : "none";
+        });
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+        showImage(currentIndex);
+      }
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % imgs.length;
+        showImage(currentIndex);
+      }
+
+      // Exponer globalmente para los onclick
+      window.prevImage = prevImage;
+      window.nextImage = nextImage;
+
+      // Arrancar mostrando la imagen correcta
+      showImage(currentIndex);
+    });
+  </script>
+</body>
+</html>
+
