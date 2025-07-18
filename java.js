@@ -178,6 +178,7 @@ function inicializarScrollHorizontal() {
 
 
 fijaImg.addEventListener("mouseenter", () => {
+  
   if (!ensamblado) {
     ensamblado = true;
     seguirCursor = false;
