@@ -417,13 +417,13 @@ canvas {
   align-items: center;
   justify-content: center;
   color: #5d0e8b;
-  font-size: 1.3vw;
+  font-size: 1vw;
   font-weight: bold;
   white-space: nowrap;
   animation: pulse 1.5s infinite alternate;
   scroll-snap-align: start;
   user-select: none;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 @keyframes pulse {

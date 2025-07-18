@@ -490,38 +490,17 @@ gsap.to(".img-3d-extra", {
 
 const proyectos = [
   {
-    video3d: "resource/videos/3d-compu..mp4",
+    video3d: "resource/videos/conejo..mp4",
     imagen: "resource/images/3D/codigo.png",
     autor: "@__CONTRAPUNTO",
-    nombre: "COMPU CUTE",
-    herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
+    nombre: "CONEJO",
+    herramientas: "BLENDER, SUBSTANCE PAINTER Y RIZOM"
   },
   {
-    video3d: "resource/videos/auto..mp4",
+    video3d: "resource/videos/ballena..mp4",
     imagen: "resource/images/3D/codigo.png",
     autor: "@__CONTRAPUNTO",
-    nombre: "AUTO ANTIGUO",
-    herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
-  },
-  {
-    video3d: "resource/videos/coser..mp4",
-    imagen: "resource/images/3D/codigo.png",
-    autor: "@__CONTRAPUNTO",
-    nombre: "MAQUINA DE COSER",
-    herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
-  },
-  {
-    video3d: "resource/videos/van..mp4",
-    imagen: "resource/images/3D/codigo.png",
-    autor: "@__CONTRAPUNTO",
-    nombre: "VAN",
-    herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
-  },
-  {
-    video3d: "resource/videos/moto..mp4",
-    imagen: "resource/images/3D/codigo.png",
-    autor: "@__CONTRAPUNTO",
-    nombre: "MOTO VINTAGE",
+    nombre: "BALLENA",
     herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
   },
   {
@@ -532,18 +511,39 @@ const proyectos = [
     herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
   },
   {
-    video3d: "resource/videos/ballena..mp4",
+    video3d: "resource/videos/coser..mp4",
     imagen: "resource/images/3D/codigo.png",
     autor: "@__CONTRAPUNTO",
-    nombre: "BALLENA",
+    nombre: "MAQUINA DE COSER",
     herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
   },
   {
-    video3d: "resource/videos/conejo..mp4",
+    video3d: "resource/videos/moto..mp4",
     imagen: "resource/images/3D/codigo.png",
     autor: "@__CONTRAPUNTO",
-    nombre: "CONEJO",
-    herramientas: "BLENDER, SUBSTANCE PAINTER Y RIZOM"
+    nombre: "MOTO VINTAGE",
+    herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
+  },
+  {
+    video3d: "resource/videos/van..mp4",
+    imagen: "resource/images/3D/codigo.png",
+    autor: "@__CONTRAPUNTO",
+    nombre: "VAN",
+    herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
+  },
+  {
+    video3d: "resource/videos/auto..mp4",
+    imagen: "resource/images/3D/codigo.png",
+    autor: "@__CONTRAPUNTO",
+    nombre: "AUTO ANTIGUO",
+    herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
+  },
+  {
+    video3d: "resource/videos/3d-compu..mp4",
+    imagen: "resource/images/3D/codigo.png",
+    autor: "@__CONTRAPUNTO",
+    nombre: "COMPU CUTE",
+    herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
   }
 ];
 
