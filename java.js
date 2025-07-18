@@ -861,6 +861,21 @@ function ensamblar() {
 
 
 
+ScrollTrigger.create({
+  trigger: video,
+  start: "top 80%",
+  end: "bottom 20%",
+  onEnter: () => {
+    if (video.readyState >= 2) video.play();
+    else video.addEventListener("canplay", () => video.play(), { once: true });
+  },
+  onLeave: () => video.pause(),
+  onEnterBack: () => {
+    if (video.readyState >= 2) video.play();
+    else video.addEventListener("canplay", () => video.play(), { once: true });
+  },
+  onLeaveBack: () => video.pause()
+});
 
 
 
