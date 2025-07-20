@@ -262,7 +262,6 @@ window.addEventListener("load", () => {
 // PROGRAMAS - Animación e interacciones
 const video = document.getElementById("programas-video");
 const videoWrapper = document.querySelector(".programas-video-wrapper");
-const playButton = document.getElementById("play-button");
 
 const tlProgramas = gsap.timeline({
   scrollTrigger: {
@@ -284,25 +283,10 @@ tlProgramas
     onStart: () => {
       videoWrapper.style.pointerEvents = "auto";
       videoWrapper.style.zIndex = "100"; // ✅ subilo cuando entra
-      playButton.style.opacity = 1;
     }
   }, 0.5);
+
   
-
-playButton.addEventListener("click", () => {
-  if (video.paused) {
-    video.play().then(() => {
-      playButton.style.display = "none";
-    }).catch(e => console.error("Error al reproducir video:", e));
-  }
-});
-
-videoWrapper.addEventListener("click", (e) => {
-  if (e.target.id === "programas-video" && !video.paused) {
-    video.pause();
-    playButton.style.display = "flex";
-  }
-});
 
 // MOTION - Texto izquierda/derecha
 gsap.fromTo(".texto-izquierda", { x: "-100vw" }, {
@@ -393,16 +377,27 @@ carousel.addEventListener('mousemove', (e) => {
 
 // Hover activa sonido en videos
 document.querySelectorAll('.video-item video').forEach(video => {
-  const parent = video.parentElement;
-  parent.addEventListener('mouseenter', () => {
+  // Evitá autoplay en loop si lo tuviera por HTML
+  video.loop = false;
+
+  video.addEventListener('mouseenter', () => {
     video.currentTime = 0;
     video.play();
   });
-  parent.addEventListener('mouseleave', () => {
+
+  video.addEventListener('mouseleave', () => {
     video.pause();
-    video.currentTime = 0;
+
+    // Obligamos al navegador a reiniciar el buffer de video
+    // Esto asegura que vuelva al poster incluso si el navegador lo cacheó
+    const src = video.querySelector('source').src;
+    video.load(); // resetea el video a su estado original
+    video.setAttribute('poster', video.getAttribute('poster')); // fuerza el poster por si no lo hace
   });
 });
+
+
+
 
 
 // Frases WWW.CONTRAPUNTO scroll
