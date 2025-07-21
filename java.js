@@ -502,14 +502,14 @@ const proyectos = [
     video3d: "resource/videos/kitty..mp4",
     imagen: "resource/images/3D/codigo.png",
     autor: "@__CONTRAPUNTO",
-    nombre: "HELLO KITTY ROBOT",
+    nombre: "HELLO KITTY",
     herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
   },
   {
     video3d: "resource/videos/coser..mp4",
     imagen: "resource/images/3D/codigo.png",
     autor: "@__CONTRAPUNTO",
-    nombre: "MAQUINA DE COSER",
+    nombre: "MÁQUINA DE COSER",
     herramientas: "BLENDER, SUBSTANCE PAINTER y RIZOM"
   },
   {
