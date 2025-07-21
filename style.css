@@ -966,15 +966,7 @@ font-size: 1vw;
   }
 
 
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #c1ff72;
-  z-index: 1;  
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
+
 
 .card-video {
   position: absolute;
@@ -984,9 +976,6 @@ font-size: 1vw;
   z-index: 0; 
 }
 
-.card:hover::before {
-  opacity: 0;
-}
 
 
 .transicion-gradiente6{
